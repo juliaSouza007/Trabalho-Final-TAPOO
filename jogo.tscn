@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://dnbsg4hyodtjm"]
+
+[ext_resource type="PackedScene" uid="uid://cvygnoh65mr1x" path="res://scenes/escola_scene.tscn" id="1_evvns"]
+[ext_resource type="PackedScene" uid="uid://sjjgtp84qc0a" path="res://scenes/objects/relogio.tscn" id="3_45nkh"]
+[ext_resource type="Script" uid="uid://bf5ft6u1ps588" path="res://scenes/TestClick.gd" id="3_ysdx3"]
+[ext_resource type="PackedScene" uid="uid://diljpio7002cw" path="res://scenes/objects/pote_tinta.tscn" id="4_ysdx3"]
+[ext_resource type="PackedScene" uid="uid://c77eh6se02377" path="res://scenes/objects/livros.tscn" id="5_t8pok"]
+[ext_resource type="PackedScene" uid="uid://ccfm32jwai2vq" path="res://scenes/objects/globo.tscn" id="6_mtw28"]
+[ext_resource type="PackedScene" uid="uid://c8yn7360sbora" path="res://scenes/objects/bola.tscn" id="7_orj5g"]
+
+[node name="jogo" type="Node2D"]
+
+[node name="Scenes" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EscolaScene" parent="Scenes" instance=ExtResource("1_evvns")]
+layout_mode = 0
+
+[node name="objects" type="Control" parent="Scenes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="relogio" parent="Scenes/objects" instance=ExtResource("3_45nkh")]
+position = Vector2(826, 106)
+script = ExtResource("3_ysdx3")
+
+[node name="poteTinta" parent="Scenes/objects" instance=ExtResource("4_ysdx3")]
+position = Vector2(767, 378)
+item_id = null
+
+[node name="livros" parent="Scenes/objects" instance=ExtResource("5_t8pok")]
+position = Vector2(337, 424)
+item_id = null
+
+[node name="globo" parent="Scenes/objects" instance=ExtResource("6_mtw28")]
+position = Vector2(846, 373)
+item_id = null
+
+[node name="bola" parent="Scenes/objects" instance=ExtResource("7_orj5g")]
+position = Vector2(436, 481)
+item_id = null

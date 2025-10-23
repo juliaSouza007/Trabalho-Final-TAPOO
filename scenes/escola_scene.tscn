@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvygnoh65mr1x"]
+
+[ext_resource type="Script" uid="uid://bqj2r10a4tpct" path="res://scripts/escola_scene.gd" id="1_xbj60"]
+[ext_resource type="Texture2D" uid="uid://l5wihc68d50i" path="res://assets/backgrounds/escola.png" id="2_g8l5w"]
+[ext_resource type="PackedScene" uid="uid://sjjgtp84qc0a" path="res://scenes/objects/relogio.tscn" id="3_cph17"]
+[ext_resource type="FontFile" uid="uid://bhwnaum452l2b" path="res://fonts/dialogue.ttf" id="3_u04e0"]
+[ext_resource type="PackedScene" uid="uid://c8yn7360sbora" path="res://scenes/objects/bola.tscn" id="4_xhksf"]
+[ext_resource type="PackedScene" uid="uid://ccfm32jwai2vq" path="res://scenes/objects/globo.tscn" id="5_garje"]
+[ext_resource type="PackedScene" uid="uid://c77eh6se02377" path="res://scenes/objects/livros.tscn" id="6_l5pal"]
+[ext_resource type="PackedScene" uid="uid://diljpio7002cw" path="res://scenes/objects/pote_tinta.tscn" id="7_4b3o3"]
+
+[node name="EscolaScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1153.0
+offset_bottom = 650.0
+mouse_filter = 2
+script = ExtResource("1_xbj60")
+metadata/_edit_lock_ = true
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 650.0
+mouse_filter = 2
+texture = ExtResource("2_g8l5w")
+expand_mode = 1
+
+[node name="ItemsContainer" type="Node2D" parent="."]
+
+[node name="relogio" parent="ItemsContainer" instance=ExtResource("3_cph17")]
+position = Vector2(827, 109)
+
+[node name="bola" parent="ItemsContainer" instance=ExtResource("4_xhksf")]
+position = Vector2(438, 479)
+
+[node name="globo" parent="ItemsContainer" instance=ExtResource("5_garje")]
+position = Vector2(846, 373)
+
+[node name="livros" parent="ItemsContainer" instance=ExtResource("6_l5pal")]
+position = Vector2(337, 423)
+
+[node name="poteTinta" parent="ItemsContainer" instance=ExtResource("7_4b3o3")]
+position = Vector2(766, 377)
+
+[node name="UI" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 649.0
+mouse_filter = 2
+
+[node name="HUD" type="MarginContainer" parent="UI"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 17.0
+offset_right = 185.0
+offset_bottom = 57.0
+mouse_filter = 2
+
+[node name="FoundLabel" type="Label" parent="UI/HUD"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_u04e0")
+theme_override_font_sizes/font_size = 40
+text = "Objetos Encontrados: "
+
+[node name="NextButton" type="Button" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 1019.0
+offset_top = 592.0
+offset_right = 1141.0
+offset_bottom = 628.0
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("3_u04e0")
+theme_override_font_sizes/font_size = 47
+disabled = true
+text = "Próxima cena"

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://sjjgtp84qc0a"]
+
+[ext_resource type="Texture2D" uid="uid://bnpdopn7bgr7d" path="res://assets/itens/relogio.png" id="1_i04as"]
+[ext_resource type="Script" uid="uid://djjinpfuhlwwr" path="res://scripts/HiddenObjectItem.gd" id="1_y7h2x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_orj5g"]
+size = Vector2(81, 73)
+
+[node name="ItemArea" type="Area2D"]
+script = ExtResource("1_y7h2x")
+item_id = "relogio"
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.37202358, 0.3594771)
+texture = ExtResource("1_i04as")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7.5, -0.5)
+shape = SubResource("RectangleShape2D_orj5g")

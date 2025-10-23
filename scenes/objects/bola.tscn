@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8yn7360sbora"]
+
+[ext_resource type="Texture2D" uid="uid://cpy4kvly1ova4" path="res://assets/itens/bola.png" id="1_1vmq5"]
+[ext_resource type="Script" uid="uid://djjinpfuhlwwr" path="res://scripts/HiddenObjectItem.gd" id="1_60r67"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_msvki"]
+radius = 17.464249
+
+[node name="ItemArea" type="Area2D"]
+script = ExtResource("1_60r67")
+item_id = "bola"
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.29573178, 0.26249984)
+texture = ExtResource("1_1vmq5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 3)
+shape = SubResource("CircleShape2D_msvki")
