@@ -30,8 +30,8 @@ Ao montar o quebra-cabeça final, a revelação é clara: não foi a memória qu
 ## 2. Mecânicas Principais
 
 ### Objetos Escondidos
-- Cada cenário contém de 5 a 7 itens-chave escondidos em locais estratégicos.
-- Interação simples: clique ou toque para revelar o item.
+- Cada cenário contém de 5 itens-chave escondidos em locais estratégicos.
+- Interação simples: clique para coletar o item.
 
 ### Sistema de Puzzle
 - Cada fase concluída libera uma peça do quebra-cabeça final.
@@ -61,13 +61,13 @@ Ao montar o quebra-cabeça final, a revelação é clara: não foi a memória qu
 - **Objetos:** Celular quebrado, agenda abarrotada, foto esquecida embaixo da cama.
 - **Significado:** A intimidade pessoal perdida para a correria.
 
-#### Escola/Escritório
+#### Escola
 - **Objetos:** Provas amassadas, pilha de papéis, relógio acelerado.
 - **Significado:** A vida de obrigações, metas e cobranças.
 
-#### Parque
-- **Objetos:** Banco vazio, brinquedo abandonado, flor pisoteada.
-- **Significado:** O mundo natural e afetivo ignorado.
+#### Escritório
+- **Objetos:** xícara de café, fichário, porta lápis, quadro de horário.
+- **Significado:** a vida adulta, o trabalho incessante.
 
 #### Hospital
 - **Objetos:** Prontuário, remédios, cadeira de espera.
@@ -87,8 +87,8 @@ O jogo traz uma crítica contemporânea sobre o excesso de pressa, produtividade
 ---
 
 ## Como Jogar
-- **Controles:** Clique ou toque para interagir com os objetos.
-- **Objetivo:** Encontre os itens escondidos em cada cenário para recuperar fragmentos de memória e montar o quebra-cabeça final.
+- **Controles:** Clique para interagir com os objetos.
+- **Objetivo:** Encontrar os itens escondidos em cada cenário, de acordo com o enigma, para recuperar fragmentos de memória e montar o quebra-cabeça final.
 
 ---
 
@@ -96,7 +96,7 @@ O jogo traz uma crítica contemporânea sobre o excesso de pressa, produtividade
 
 **Grupo:** Divas De Info
 
-- **Júlia Martins:** Programador Principal
+- **Júlia Martins:** Programadora Principal
 - **Isadora Ramos:** Designer de Gameplay
 - **Heitor Freitas:** Designer Visual
 - **Maria Fernanda:** Roteirista
