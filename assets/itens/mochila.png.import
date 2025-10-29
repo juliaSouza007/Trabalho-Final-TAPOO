@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0y0y8yvmka0h"
-path="res://.godot/imported/poteTinta.png-fc618ba732401bd7529bc774ccc47f71.ctex"
+uid="uid://dm5d0jbubht1"
+path="res://.godot/imported/mochila.png-d185dadf748b318618812235b76581cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/itens/poteTinta.png"
-dest_files=["res://.godot/imported/poteTinta.png-fc618ba732401bd7529bc774ccc47f71.ctex"]
+source_file="res://assets/itens/mochila.png"
+dest_files=["res://.godot/imported/mochila.png-d185dadf748b318618812235b76581cc.ctex"]
 
 [params]
 

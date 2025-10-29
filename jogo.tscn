@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dnbsg4hyodtjm"]
+[gd_scene load_steps=7 format=3 uid="uid://dnbsg4hyodtjm"]
 
 [ext_resource type="PackedScene" uid="uid://cvygnoh65mr1x" path="res://scenes/escola_scene.tscn" id="1_evvns"]
-[ext_resource type="PackedScene" uid="uid://sjjgtp84qc0a" path="res://scenes/objects/relogio.tscn" id="3_45nkh"]
-[ext_resource type="Script" uid="uid://bf5ft6u1ps588" path="res://scenes/TestClick.gd" id="3_ysdx3"]
-[ext_resource type="PackedScene" uid="uid://diljpio7002cw" path="res://scenes/objects/pote_tinta.tscn" id="4_ysdx3"]
-[ext_resource type="PackedScene" uid="uid://c77eh6se02377" path="res://scenes/objects/livros.tscn" id="5_t8pok"]
-[ext_resource type="PackedScene" uid="uid://ccfm32jwai2vq" path="res://scenes/objects/globo.tscn" id="6_mtw28"]
-[ext_resource type="PackedScene" uid="uid://c8yn7360sbora" path="res://scenes/objects/bola.tscn" id="7_orj5g"]
+[ext_resource type="PackedScene" uid="uid://c8yn7360sbora" path="res://scenes/objects/bola.tscn" id="2_8c340"]
+[ext_resource type="PackedScene" uid="uid://by7x4n4vvmkv5" path="res://scenes/objects/abaco.tscn" id="3_45nkh"]
+[ext_resource type="PackedScene" uid="uid://c77eh6se02377" path="res://scenes/objects/livros.tscn" id="4_ysdx3"]
+[ext_resource type="PackedScene" uid="uid://l5truy2i74ai" path="res://scenes/objects/mochila.tscn" id="5_t8pok"]
+[ext_resource type="PackedScene" uid="uid://dutx1637sgbpe" path="res://scenes/objects/pinceis.tscn" id="6_mtw28"]
 
 [node name="jogo" type="Node2D"]
 
@@ -24,22 +23,17 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="relogio" parent="Scenes/objects" instance=ExtResource("3_45nkh")]
-position = Vector2(826, 106)
-script = ExtResource("3_ysdx3")
+[node name="bola" parent="Scenes/objects" instance=ExtResource("2_8c340")]
+position = Vector2(485, 538)
 
-[node name="poteTinta" parent="Scenes/objects" instance=ExtResource("4_ysdx3")]
-position = Vector2(767, 378)
-item_id = null
+[node name="abaco" parent="Scenes/objects" instance=ExtResource("3_45nkh")]
+position = Vector2(971, 504)
 
-[node name="livros" parent="Scenes/objects" instance=ExtResource("5_t8pok")]
-position = Vector2(337, 424)
-item_id = null
+[node name="livros" parent="Scenes/objects" instance=ExtResource("4_ysdx3")]
+position = Vector2(327, 513)
 
-[node name="globo" parent="Scenes/objects" instance=ExtResource("6_mtw28")]
-position = Vector2(846, 373)
-item_id = null
+[node name="mochila" parent="Scenes/objects" instance=ExtResource("5_t8pok")]
+position = Vector2(946, 645)
 
-[node name="bola" parent="Scenes/objects" instance=ExtResource("7_orj5g")]
-position = Vector2(436, 481)
-item_id = null
+[node name="pinceis" parent="Scenes/objects" instance=ExtResource("6_mtw28")]
+position = Vector2(84, 453)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwbbxxg4wgccw"
-path="res://.godot/imported/globo.png-c4ababc9b7fd15aca4cdff9e804b8552.ctex"
+uid="uid://cdkuxtqwtc7dy"
+path="res://.godot/imported/abaco.png-1cef9ffd15e5709c085e35a0dc91bea0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/itens/globo.png"
-dest_files=["res://.godot/imported/globo.png-c4ababc9b7fd15aca4cdff9e804b8552.ctex"]
+source_file="res://assets/itens/abaco.png"
+dest_files=["res://.godot/imported/abaco.png-1cef9ffd15e5709c085e35a0dc91bea0.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnpdopn7bgr7d"
-path="res://.godot/imported/relogio.png-79be1aa8e6f92b12c2aed0f4cefa90eb.ctex"
+uid="uid://pqerme3hfm2n"
+path="res://.godot/imported/pinceis.png-fcd57696533145d898e393c5c355f99b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/itens/relogio.png"
-dest_files=["res://.godot/imported/relogio.png-79be1aa8e6f92b12c2aed0f4cefa90eb.ctex"]
+source_file="res://assets/itens/pinceis.png"
+dest_files=["res://.godot/imported/pinceis.png-fcd57696533145d898e393c5c355f99b.ctex"]
 
 [params]
 

@@ -1,20 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://c77eh6se02377"]
 
-[ext_resource type="Texture2D" uid="uid://bgy25f02rybno" path="res://assets/itens/livros.png" id="1_3eok0"]
+[ext_resource type="Texture2D" uid="uid://b1mp8uvjr512y" path="res://assets/itens/livros.png" id="1_3eok0"]
 [ext_resource type="Script" uid="uid://djjinpfuhlwwr" path="res://scripts/HiddenObjectItem.gd" id="1_xgety"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ka1p"]
-size = Vector2(72, 35)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xgety"]
+size = Vector2(60, 28)
 
-[node name="ItemArea" type="Area2D"]
+[node name="Area2D" type="Area2D"]
 script = ExtResource("1_xgety")
 item_id = "livros"
 metadata/_edit_group_ = true
 
 [node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.27499998, 0.24606292)
+scale = Vector2(0.16266376, 0.14244185)
 texture = ExtResource("1_3eok0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 2.5)
-shape = SubResource("RectangleShape2D_2ka1p")
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_xgety")
+
+[connection signal="found" from="." to="." method="_on_found"]
