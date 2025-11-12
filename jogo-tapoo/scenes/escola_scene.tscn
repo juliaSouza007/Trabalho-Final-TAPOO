@@ -1,0 +1,131 @@
+[gd_scene load_steps=15 format=3 uid="uid://blpeyjs5rmg5e"]
+
+[ext_resource type="Texture2D" uid="uid://cqpotj42fk08j" path="res://assets/background/bgEscola.png" id="1_v1h0i"]
+[ext_resource type="Script" uid="uid://y1jayi2itvff" path="res://scenes/Object.gd" id="2_g8l5w"]
+[ext_resource type="Script" uid="uid://h7antvuq7p7h" path="res://scenes/GameController.gd" id="2_u04e0"]
+[ext_resource type="Texture2D" uid="uid://carulncuqok0o" path="res://assets/objects/escola/bola.png" id="3_u04e0"]
+[ext_resource type="Texture2D" uid="uid://c7asvokmn1ywy" path="res://assets/objects/escola/mochila.png" id="4_uftdt"]
+[ext_resource type="FontFile" uid="uid://gkdll8sjhf2e" path="res://assets/fonts/game_over.ttf" id="6_uftdt"]
+[ext_resource type="Texture2D" uid="uid://cd7ujqdmsv4yr" path="res://assets/objects/escola/pinceis.png" id="6_xau2e"]
+[ext_resource type="Texture2D" uid="uid://cva45p7ghk8l1" path="res://assets/objects/escola/livros.png" id="7_xhksf"]
+[ext_resource type="Texture2D" uid="uid://b45xf16bhkvg" path="res://assets/objects/escola/abaco.png" id="8_garje"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xau2e"]
+radius = 16.124516
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cph17"]
+size = Vector2(50, 43.94184)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xhksf"]
+size = Vector2(25, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l5pal"]
+size = Vector2(48, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4b3o3"]
+size = Vector2(45, 35.055206)
+
+[node name="EscolaScene" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1156.0
+offset_bottom = 653.0
+mouse_filter = 2
+texture = ExtResource("1_v1h0i")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="GameController" type="Node" parent="."]
+script = ExtResource("2_u04e0")
+enigma_label_path = NodePath("../EnigmaText")
+
+[node name="ObjectContainer" type="Node2D" parent="."]
+
+[node name="bola" type="Area2D" parent="ObjectContainer"]
+position = Vector2(437, 488)
+script = ExtResource("2_g8l5w")
+object_id = 1
+game_controller_path = NodePath("../../GameController")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjectContainer/bola"]
+scale = Vector2(0.3018293, 0.28125)
+texture = ExtResource("3_u04e0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectContainer/bola"]
+position = Vector2(-3, 1)
+shape = SubResource("CircleShape2D_xau2e")
+
+[node name="mochila" type="Area2D" parent="ObjectContainer"]
+position = Vector2(794, 526)
+script = ExtResource("2_g8l5w")
+object_id = 2
+game_controller_path = NodePath("../../GameController")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjectContainer/mochila"]
+scale = Vector2(0.15139568, 0.14272363)
+texture = ExtResource("4_uftdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectContainer/mochila"]
+position = Vector2(-4.8657756, -1.0931705)
+rotation = 0.122173056
+shape = SubResource("RectangleShape2D_cph17")
+
+[node name="pincel" type="Area2D" parent="ObjectContainer"]
+position = Vector2(97, 403)
+script = ExtResource("2_g8l5w")
+object_id = 3
+game_controller_path = NodePath("../../GameController")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjectContainer/pincel"]
+scale = Vector2(0.20238096, 0.17154258)
+texture = ExtResource("6_xau2e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectContainer/pincel"]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_xhksf")
+
+[node name="livro" type="Area2D" parent="ObjectContainer"]
+position = Vector2(925, 460)
+script = ExtResource("2_g8l5w")
+object_id = 4
+game_controller_path = NodePath("../../GameController")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjectContainer/livro"]
+scale = Vector2(0.17194323, 0.12790702)
+texture = ExtResource("7_xhksf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectContainer/livro"]
+position = Vector2(-11, -0.5)
+shape = SubResource("RectangleShape2D_l5pal")
+
+[node name="abaco" type="Area2D" parent="ObjectContainer"]
+position = Vector2(276, 455)
+script = ExtResource("2_g8l5w")
+object_id = 5
+game_controller_path = NodePath("../../GameController")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjectContainer/abaco"]
+scale = Vector2(0.14389537, 0.10336537)
+texture = ExtResource("8_garje")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectContainer/abaco"]
+position = Vector2(-1.3762178, -0.5238204)
+rotation = 0.061086528
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_4b3o3")
+
+[node name="EnigmaText" type="Label" parent="."]
+offset_left = 50.0
+offset_top = 21.0
+offset_right = 90.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("6_uftdt")
+theme_override_font_sizes/font_size = 32
