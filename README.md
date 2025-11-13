@@ -12,9 +12,7 @@ Desenvolvimento de um jogo digital utilizando a biblioteca MonoGame
 ### História
 O jogador controla uma personagem anônima que acorda em um vazio mental, recebendo o recado do coelho de Alice (do *País das Maravilhas*), e inicia sua jornada para recuperar o tempo perdido. Suas memórias estão fragmentadas em quatro cenários distintos, cada um representando uma etapa da vida marcada por pressa, distração e esquecimento.
 
-À medida que o jogador encontra objetos escondidos nesses cenários, pequenos fragmentos de lembrança são recuperados. No entanto, o que emerge não é a imagem de uma vida plena, mas a constatação de que a personagem viveu ocupada demais para realmente viver. 
-
-Ao montar o quebra-cabeça final, a revelação é clara: não foi a memória que se perdeu, mas a vida que passou despercebida.
+À medida que o jogador resolve os enigmas e encontra objetos escondidos nesses cenários, pequenos fragmentos de lembrança são recuperados. No entanto, o que emerge não é a imagem de uma vida plena, mas a constatação de que a personagem viveu ocupada demais para realmente viver. 
 
 ### Tema
 - **Crítica social:** Ritmo acelerado da vida moderna.
@@ -23,7 +21,7 @@ Ao montar o quebra-cabeça final, a revelação é clara: não foi a memória qu
 
 ### Gênero
 - **Hidden Object (Objetos escondidos):** Exploração visual, busca por itens que remetem à memória.
-- **Puzzle narrativo:** O jogador monta, peça por peça, a verdade sobre a vida da personagem.
+- **Puzzle:** O jogador descobre os enigmas relacionados a cada objeto, como também a verdade sobre a vida da personagem.
 
 ---
 
@@ -34,13 +32,12 @@ Ao montar o quebra-cabeça final, a revelação é clara: não foi a memória qu
 - Interação simples: clique para coletar o item.
 
 ### Sistema de Puzzle
-- Cada fase concluída libera uma peça do quebra-cabeça final.
-- O puzzle é composto por 4 partes, representando a memória completa.
-- Sistema de **arrastar e soltar** (drag & drop).
+- Cada objeto tem seu enigma para ser resolvido.
+- Cada cena tem 5 puzzles, representando a memória completa daquela parte.
 
 ### Cutscenes
 - Cutscenes curtas após cada fase.
-- Pequenos textos (1 a 2 frases) após cada cenário, com uma linguagem enigmática que dá pistas, sem explicações claras.
+- Pequenos textos (4 a 6 frases) entre os cenário, com uma linguagem enigmática que dá pistas, sem explicações claras.
 - O mistério mantém o jogador intrigado.
 
 ### Final Reflexivo
@@ -53,24 +50,20 @@ Ao montar o quebra-cabeça final, a revelação é clara: não foi a memória qu
 
 ### Personagens
 - **Coelho de Alice**, representando o tempo.
-- Mulher doente
+- **Mulher doente**
 
 ### Cenários (Metáforas Visuais)
 
 #### Quarto
-- **Objetos:** Celular quebrado, agenda abarrotada, foto esquecida embaixo da cama.
 - **Significado:** A intimidade pessoal perdida para a correria.
 
 #### Escola
-- **Objetos:** Provas amassadas, pilha de papéis, relógio acelerado.
 - **Significado:** A vida de obrigações, metas e cobranças.
 
 #### Escritório
-- **Objetos:** xícara de café, fichário, porta lápis, quadro de horário.
 - **Significado:** a vida adulta, o trabalho incessante.
 
 #### Hospital
-- **Objetos:** Prontuário, remédios, cadeira de espera.
 - **Significado:** O corpo que cobra o preço da pressa.
 
 ---
@@ -88,7 +81,7 @@ O jogo traz uma crítica contemporânea sobre o excesso de pressa, produtividade
 
 ## Como Jogar
 - **Controles:** Clique para interagir com os objetos.
-- **Objetivo:** Encontrar os itens escondidos em cada cenário, de acordo com o enigma, para recuperar fragmentos de memória e montar o quebra-cabeça final.
+- **Objetivo:** Encontrar os itens escondidos em cada cenário, de acordo com o enigma, para recuperar fragmentos de memória.
 
 ---
 
