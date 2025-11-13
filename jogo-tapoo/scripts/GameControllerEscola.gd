@@ -12,11 +12,8 @@ extends Node
 @export var transition_button_path: NodePath
 var transition_button: Button
 
-# REMOVIDO: var awaiting_transition_click: bool = false
-
-
 # ==============================================================================
-# 2. CONSTANTES DE JOGO E ENIGMAS (CENA QUARTO)
+# 2. CONSTANTES DE JOGO E ENIGMAS (CENA ESCOLA)
 # ==============================================================================
 
 # Mapeamento do ID (ordem) para o nome do objeto (para referência de debug)
@@ -57,7 +54,7 @@ var enigma_label: Label
 # ==============================================================================
 
 func _ready():
-	print("--- INICIANDO GAME CONTROLLER (Cena Quarto) ---")
+	print("--- INICIANDO GAME CONTROLLER (Cena Escola) ---")
 	
 	# 1. Tenta encontrar o nó de texto para exibir o enigma
 	if not enigma_label_path.is_empty():
@@ -93,10 +90,6 @@ func _ready():
 		
 	# 4. Inicia o jogo
 	start_next_enigma()
-
-
-# REMOVIDO: func _input(event): (A lógica de clique manual foi movida para o botão)
-
 
 # -------------------- Lógica do Enigma --------------------
 func start_next_enigma():

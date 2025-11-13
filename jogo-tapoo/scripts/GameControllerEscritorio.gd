@@ -6,37 +6,37 @@ extends Node
 
 # O Caminho do arquivo da próxima cena que deve ser carregada.
 # ESTE CAMPO DEVE SER PREENCHIDO NO INSPECTOR PARA ESTA CENA 
-@export var next_scene_path: String = "res://scenes/escola_scene.tscn"
+@export var next_scene_path: String = "res://scenes/hospital_scene.tscn"
 
 # REFERÊNCIA AO BOTÃO DE TRANSIÇÃO 
 @export var transition_button_path: NodePath
 var transition_button: Button
 
 # ==============================================================================
-# 2. CONSTANTES DE JOGO E ENIGMAS (CENA QUARTO)
+# 2. CONSTANTES DE JOGO E ENIGMAS (CENA ESCRITORIO)
 # ==============================================================================
 
 # Mapeamento do ID (ordem) para o nome do objeto (para referência de debug)
 const OBJECT_NAMES = {
-	1: "Diario",
-	2: "Fone",
-	3: "Cacto",
-	4: "Violao",
-	5: "Garrafa"
+	1: "Caneca",
+	2: "Chave",
+	3: "Oculos",
+	4: "Telefone",
+	5: "Grampeador"
 }
 
 # Lista de enigmas, na ordem de coleta (ID 1 a 5).
 const ENIGMAS = [
-	# ID 1: diario
-	"Tenho folhas, mas não sou planta. Tenho segredos, mas não falo. Quem me escreve, desabafa e quem me lê, me conhece. O que sou?",
-	# ID 2: fone
-	"Dois pequenos amigos que vivem nas orelhas. Sem eles, a música se perde nas estrelas. O que sou?",
-	# ID 3: cacto
-	"No deserto sou rei, na seca sou dono. Guardo água no corpo e espinhos no trono. O que sou?",
-	# ID 4: violao
-	"Tenho corpo, mas não tenho pés, faço música quando alguém me mexe. Se tocarem em mim com emoção, respondo com ritmo e vibração. O que sou?",
-	# ID 5: garrafa
-	"Leve quando vazia, pesada quando cheia. Sou simples, mas essencial, na jornada e na seca. O que sou?"
+	# ID 1: caneca
+	"Tenho asa, mas não voo. Tenho boca, mas não falo. Me enchem de café ou chá, líquido que faz o dia começar. O que sou?",
+	# ID 2: chave
+	"Sou o elo entre o dentro e o fora, carrego o poder da entrada, sem mim, o portão é prisão, em mim mora o poder de abrir e fechar. O que sou?",
+	# ID 3: oculos
+	"Vivo sobre o nariz, mas não tenho cheiro. Se me perdem, é desespero! Levo foco e melhoro sua visão. O que sou?",
+	# ID 4: telefone
+	"Às vezes vibro, às vezes toco. Falo sem boca, ouço sem ouvido. Me chamam de longe, e eu respondo. O que sou?",
+	# ID 5: grampeador
+	"Tenho mola e metal, faço barulho e prendo papel, unindo o que está separado. No escritório, sou essencial. O que sou?"
 ]
 
 # Mapa dos objetos: ID (ordem) -> Nó do Objeto
@@ -54,7 +54,7 @@ var enigma_label: Label
 # ==============================================================================
 
 func _ready():
-	print("--- INICIANDO GAME CONTROLLER (Cena Quarto) ---")
+	print("--- INICIANDO GAME CONTROLLER (Cena Escola) ---")
 	
 	# 1. Tenta encontrar o nó de texto para exibir o enigma
 	if not enigma_label_path.is_empty():

@@ -1,0 +1,149 @@
+[gd_scene load_steps=16 format=3 uid="uid://ctypbyn5cx2tr"]
+
+[ext_resource type="Texture2D" uid="uid://xkdustpm6li3" path="res://assets/background/bgHospital.png" id="1_h0ptg"]
+[ext_resource type="Script" uid="uid://enpbfmlvud8y" path="res://scripts/GameControllerHospital.gd" id="2_h0ptg"]
+[ext_resource type="Script" uid="uid://y1jayi2itvff" path="res://scripts/Object.gd" id="3_lb543"]
+[ext_resource type="Texture2D" uid="uid://ck4d4jprmygjc" path="res://assets/objects/hospital/maça.png" id="4_r5758"]
+[ext_resource type="Texture2D" uid="uid://di2mmdr851wik" path="res://assets/objects/hospital/pulseira.png" id="5_lb543"]
+[ext_resource type="Texture2D" uid="uid://cealkksm7rd28" path="res://assets/objects/hospital/toalha.png" id="6_2fk62"]
+[ext_resource type="Texture2D" uid="uid://lks3c3wubouh" path="res://assets/objects/hospital/pantufa.png" id="7_trb54"]
+[ext_resource type="Texture2D" uid="uid://g2hhyxvy7tfj" path="res://assets/objects/hospital/bolsinha.png" id="8_kdhrm"]
+[ext_resource type="FontFile" uid="uid://cicxj0p1x5qbg" path="res://assets/fonts/normal.ttf" id="9_cis8i"]
+[ext_resource type="FontFile" uid="uid://c7hnnct5hsqpn" path="res://assets/fonts/title.otf" id="10_2gj7l"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jcgfd"]
+radius = 9.000002
+height = 22.000006
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tm7rn"]
+radius = 7.0690465
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_23gqx"]
+size = Vector2(36.288162, 34.640858)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sra3f"]
+radius = 11.998521
+height = 43.994576
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4b3o3"]
+size = Vector2(29, 19.851582)
+
+[node name="HospitalScene" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1156.0
+offset_bottom = 653.0
+mouse_filter = 2
+texture = ExtResource("1_h0ptg")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="GameController" type="Node" parent="."]
+script = ExtResource("2_h0ptg")
+next_scene_path = "res://scenes/escola_scene.tscn"
+transition_button_path = NodePath("../NextButton")
+enigma_label_path = NodePath("../EnigmaText")
+
+[node name="ObjectContainer" type="Node2D" parent="."]
+
+[node name="maca" type="Area2D" parent="ObjectContainer"]
+position = Vector2(301, 361)
+script = ExtResource("3_lb543")
+object_id = 1
+game_controller_path = NodePath("../../GameController")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjectContainer/maca"]
+scale = Vector2(0.13437612, 0.13909413)
+texture = ExtResource("4_r5758")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectContainer/maca"]
+position = Vector2(1, 2.3841858e-07)
+scale = Vector2(0.9999999, 0.9999998)
+shape = SubResource("CapsuleShape2D_jcgfd")
+
+[node name="pulseira" type="Area2D" parent="ObjectContainer"]
+position = Vector2(86, 453)
+script = ExtResource("3_lb543")
+object_id = 2
+game_controller_path = NodePath("../../GameController")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjectContainer/pulseira"]
+scale = Vector2(0.14317174, 0.11633917)
+texture = ExtResource("5_lb543")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectContainer/pulseira"]
+position = Vector2(-3, -2)
+rotation = -1.9809487
+shape = SubResource("CapsuleShape2D_tm7rn")
+
+[node name="toalha" type="Area2D" parent="ObjectContainer"]
+position = Vector2(508, 431)
+script = ExtResource("3_lb543")
+object_id = 3
+game_controller_path = NodePath("../../GameController")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjectContainer/toalha"]
+rotation = 0.02617994
+scale = Vector2(0.21239728, 0.14120981)
+texture = ExtResource("6_2fk62")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectContainer/toalha"]
+position = Vector2(1.0653462, -0.043793455)
+rotation = 0.36651915
+skew = 0.4886922
+shape = SubResource("RectangleShape2D_23gqx")
+
+[node name="pantufa" type="Area2D" parent="ObjectContainer"]
+position = Vector2(468, 578)
+script = ExtResource("3_lb543")
+object_id = 4
+game_controller_path = NodePath("../../GameController")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjectContainer/pantufa"]
+scale = Vector2(0.19259708, 0.13463406)
+texture = ExtResource("7_trb54")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectContainer/pantufa"]
+position = Vector2(-3.0000005, -1.0000001)
+rotation = 1.5254178
+shape = SubResource("CapsuleShape2D_sra3f")
+
+[node name="bolsinha" type="Area2D" parent="ObjectContainer"]
+position = Vector2(141, 441)
+script = ExtResource("3_lb543")
+object_id = 5
+game_controller_path = NodePath("../../GameController")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjectContainer/bolsinha"]
+scale = Vector2(0.17145547, 0.14574486)
+texture = ExtResource("8_kdhrm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectContainer/bolsinha"]
+position = Vector2(-0.9282196, -1.1735975)
+rotation = 0.061086524
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_4b3o3")
+
+[node name="EnigmaText" type="Label" parent="."]
+offset_left = 54.0
+offset_top = 13.0
+offset_right = 95.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("9_cis8i")
+theme_override_font_sizes/font_size = 12
+
+[node name="NextButton" type="Button" parent="."]
+offset_left = 958.0
+offset_top = 604.0
+offset_right = 1140.0
+offset_bottom = 638.0
+theme_override_fonts/font = ExtResource("10_2gj7l")
+theme_override_font_sizes/font_size = 12
