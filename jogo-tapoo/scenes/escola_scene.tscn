@@ -1,14 +1,17 @@
-[gd_scene load_steps=15 format=3 uid="uid://blpeyjs5rmg5e"]
+[gd_scene load_steps=18 format=3 uid="uid://blpeyjs5rmg5e"]
 
 [ext_resource type="Texture2D" uid="uid://cqpotj42fk08j" path="res://assets/background/bgEscola.png" id="1_v1h0i"]
-[ext_resource type="Script" uid="uid://y1jayi2itvff" path="res://scenes/Object.gd" id="2_g8l5w"]
-[ext_resource type="Script" uid="uid://h7antvuq7p7h" path="res://scenes/GameController.gd" id="2_u04e0"]
+[ext_resource type="Script" uid="uid://y1jayi2itvff" path="res://scripts/Object.gd" id="2_g8l5w"]
+[ext_resource type="Script" uid="uid://h7antvuq7p7h" path="res://scripts/GameController.gd" id="2_u04e0"]
 [ext_resource type="Texture2D" uid="uid://carulncuqok0o" path="res://assets/objects/escola/bola.png" id="3_u04e0"]
 [ext_resource type="Texture2D" uid="uid://c7asvokmn1ywy" path="res://assets/objects/escola/mochila.png" id="4_uftdt"]
-[ext_resource type="FontFile" uid="uid://gkdll8sjhf2e" path="res://assets/fonts/game_over.ttf" id="6_uftdt"]
+[ext_resource type="FontFile" uid="uid://gkdll8sjhf2e" path="res://assets/fonts/dialogues.ttf" id="6_uftdt"]
 [ext_resource type="Texture2D" uid="uid://cd7ujqdmsv4yr" path="res://assets/objects/escola/pinceis.png" id="6_xau2e"]
 [ext_resource type="Texture2D" uid="uid://cva45p7ghk8l1" path="res://assets/objects/escola/livros.png" id="7_xhksf"]
 [ext_resource type="Texture2D" uid="uid://b45xf16bhkvg" path="res://assets/objects/escola/abaco.png" id="8_garje"]
+[ext_resource type="FontFile" uid="uid://n7bayhf12g00" path="res://assets/fonts/title.ttf" id="10_garje"]
+[ext_resource type="Texture2D" uid="uid://dw50tduhgu6f" path="res://assets/sprites/coelho/relogio_centro.png" id="11_4b3o3"]
+[ext_resource type="Texture2D" uid="uid://cbud57fvxc1sp" path="res://assets/sprites/personagem/triste.png" id="12_ybn21"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xau2e"]
 radius = 16.124516
@@ -129,3 +132,74 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("6_uftdt")
 theme_override_font_sizes/font_size = 32
+
+[node name="MemoryFragmentDisplay" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="MemoryFragmentDisplay"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="MemoryFragmentDisplay/Control"]
+visible = false
+layout_mode = 0
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 1157.0
+offset_bottom = 654.0
+color = Color(0, 0, 0, 0.6431373)
+
+[node name="PersonagemLabel" type="Label" parent="MemoryFragmentDisplay/Control"]
+visible = false
+layout_mode = 0
+offset_left = 318.0
+offset_top = 158.0
+offset_right = 358.0
+offset_bottom = 187.0
+theme_override_fonts/font = ExtResource("6_uftdt")
+theme_override_font_sizes/font_size = 50
+
+[node name="CoelhoLabel" type="Label" parent="MemoryFragmentDisplay/Control"]
+visible = false
+layout_mode = 0
+offset_left = 746.0
+offset_top = 298.0
+offset_right = 786.0
+offset_bottom = 327.0
+theme_override_fonts/font = ExtResource("6_uftdt")
+theme_override_font_sizes/font_size = 50
+
+[node name="ProximaFalaLabel" type="Label" parent="MemoryFragmentDisplay/Control"]
+visible = false
+layout_mode = 0
+offset_left = 436.0
+offset_top = 20.0
+offset_right = 719.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource("10_garje")
+theme_override_font_sizes/font_size = 20
+text = "Clique para continuar"
+
+[node name="SpriteCoelho" type="TextureRect" parent="MemoryFragmentDisplay/Control"]
+visible = false
+layout_mode = 0
+offset_left = 787.0
+offset_top = 355.0
+offset_right = 999.0
+offset_bottom = 641.0
+texture = ExtResource("11_4b3o3")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="SpritePersonagem" type="TextureRect" parent="MemoryFragmentDisplay/Control"]
+visible = false
+layout_mode = 0
+offset_left = 98.0
+offset_top = 208.0
+offset_right = 466.0
+offset_bottom = 652.0
+texture = ExtResource("12_ybn21")
+expand_mode = 1
+stretch_mode = 4

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://gkdll8sjhf2e"
-path="res://.godot/imported/game_over.ttf-b45b008b42d31a075d4d82024b74c524.fontdata"
+path="res://.godot/imported/dialogues.ttf-bc4d0386d9cd416651f36e22c3bdc869.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/game_over.ttf"
-dest_files=["res://.godot/imported/game_over.ttf-b45b008b42d31a075d4d82024b74c524.fontdata"]
+source_file="res://assets/fonts/dialogues.ttf"
+dest_files=["res://.godot/imported/dialogues.ttf-bc4d0386d9cd416651f36e22c3bdc869.fontdata"]
 
 [params]
 
