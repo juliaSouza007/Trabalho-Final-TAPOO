@@ -6,7 +6,7 @@ extends Button
 
 # Defina o caminho para a PRIMEIRA CENA do jogo (Ex: HospitalScene.tscn).
 # Você deve preencher este campo no Inspector do Godot.
-@export var target_scene_path: String = "res://scenes/dialogue_scene1.tscn" 
+@export var target_scene_path: String = "res://scenes/tela_inicial.tscn" 
 
 # ==============================================================================
 # 2. INICIALIZAÇÃO E AÇÃO
@@ -17,7 +17,7 @@ func _ready():
 	self.pressed.connect(_on_pressed)
 	
 	# Define o texto do botão
-	self.text = "INICIAR JOGO"
+	self.text = "REINICIAR JOGO"
 
 func _on_pressed():
 	if target_scene_path.is_empty():

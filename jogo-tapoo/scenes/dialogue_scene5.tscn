@@ -1,24 +1,24 @@
-[gd_scene load_steps=19 format=4 uid="uid://dj437hhbxjei3"]
+[gd_scene load_steps=19 format=4 uid="uid://bfmrfxdgjo6bh"]
 
-[ext_resource type="Texture2D" uid="uid://xkdustpm6li3" path="res://assets/background/bgHospital.png" id="1_8418g"]
-[ext_resource type="Script" uid="uid://ddyuv18w2tj2j" path="res://scripts/Dialogue1.gd" id="1_v3aps"]
-[ext_resource type="Texture2D" uid="uid://dw50tduhgu6f" path="res://assets/sprites/coelho/relogio_centro.png" id="3_bgld1"]
-[ext_resource type="Texture2D" uid="uid://cwuc8mfwnkht5" path="res://assets/sprites/personagem/falando.png" id="3_pakjr"]
-[ext_resource type="Texture2D" uid="uid://cbud57fvxc1sp" path="res://assets/sprites/personagem/triste.png" id="4_7o65r"]
-[ext_resource type="Script" uid="uid://bljfhqlebqk5" path="res://scripts/ScriptAnimation.gd" id="5_j4ush"]
-[ext_resource type="Texture2D" uid="uid://bhfcw7khegetp" path="res://assets/sprites/coelho/relogio_direita.png" id="7_b84p1"]
-[ext_resource type="Texture2D" uid="uid://cd7pw26dxniqf" path="res://assets/sprites/coelho/relogio_esquerda.png" id="8_umbgm"]
-[ext_resource type="FontFile" uid="uid://cicxj0p1x5qbg" path="res://assets/fonts/normal.ttf" id="9_pakjr"]
-[ext_resource type="FontFile" uid="uid://c7hnnct5hsqpn" path="res://assets/fonts/title.otf" id="10_j4ush"]
+[ext_resource type="Script" uid="uid://kkyo6xi2jsrp" path="res://scripts/Dialogue5.gd" id="1_6tmsw"]
+[ext_resource type="Texture2D" uid="uid://xkdustpm6li3" path="res://assets/background/bgHospital.png" id="2_cmil5"]
+[ext_resource type="Texture2D" uid="uid://cwuc8mfwnkht5" path="res://assets/sprites/personagem/falando.png" id="3_nh4vl"]
+[ext_resource type="Texture2D" uid="uid://cbud57fvxc1sp" path="res://assets/sprites/personagem/triste.png" id="4_o5xwu"]
+[ext_resource type="Script" uid="uid://bljfhqlebqk5" path="res://scripts/ScriptAnimation.gd" id="5_ylthp"]
+[ext_resource type="Texture2D" uid="uid://dw50tduhgu6f" path="res://assets/sprites/coelho/relogio_centro.png" id="6_swjhx"]
+[ext_resource type="Texture2D" uid="uid://bhfcw7khegetp" path="res://assets/sprites/coelho/relogio_direita.png" id="7_atdc0"]
+[ext_resource type="Texture2D" uid="uid://cd7pw26dxniqf" path="res://assets/sprites/coelho/relogio_esquerda.png" id="8_ftp1s"]
+[ext_resource type="FontFile" uid="uid://cicxj0p1x5qbg" path="res://assets/fonts/normal.ttf" id="9_13tbm"]
+[ext_resource type="FontFile" uid="uid://c7hnnct5hsqpn" path="res://assets/fonts/title.otf" id="10_qyh1m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2ewa5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_pakjr")
+"texture": ExtResource("3_nh4vl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_7o65r")
+"texture": ExtResource("4_o5xwu")
 }],
 "loop": true,
 "name": &"idle",
@@ -29,16 +29,16 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_bgld1")
+"texture": ExtResource("6_swjhx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_b84p1")
+"texture": ExtResource("7_atdc0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_bgld1")
+"texture": ExtResource("6_swjhx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_umbgm")
+"texture": ExtResource("8_ftp1s")
 }],
 "loop": true,
 "name": &"idle",
@@ -512,14 +512,14 @@ cache/0/18/0/glyphs/89/size = Vector2(15, 19)
 cache/0/18/0/glyphs/89/uv_rect = Rect2(179, 1, 15, 19)
 cache/0/18/0/glyphs/89/texture_idx = 0
 
-[node name="DialogueScene1" type="Node2D"]
-script = ExtResource("1_v3aps")
+[node name="DialogueScene5" type="Node2D"]
+script = ExtResource("1_6tmsw")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1156.0
 offset_bottom = 651.0
 mouse_filter = 2
-texture = ExtResource("1_8418g")
+texture = ExtResource("2_cmil5")
 expand_mode = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -527,7 +527,7 @@ offset_left = -6.0
 offset_top = -6.0
 offset_right = 1157.0
 offset_bottom = 654.0
-color = Color(0, 0, 0, 0.6745098)
+color = Color(0, 0, 0, 0.8156863)
 metadata/_edit_lock_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -538,14 +538,14 @@ scale = Vector2(0.8468136, 0.75326794)
 sprite_frames = SubResource("SpriteFrames_2ewa5")
 animation = &"idle"
 frame_progress = 0.81418276
-script = ExtResource("5_j4ush")
+script = ExtResource("5_ylthp")
 
 [node name="CoelhoAnimated" type="AnimatedSprite2D" parent="."]
 position = Vector2(897.00006, 491)
 scale = Vector2(0.469651, 0.40138954)
 sprite_frames = SubResource("SpriteFrames_cxcm8")
 animation = &"idle"
-script = ExtResource("5_j4ush")
+script = ExtResource("5_ylthp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -553,7 +553,7 @@ script = ExtResource("5_j4ush")
 offset_left = 343.0
 offset_top = 121.0
 offset_right = 643.0
-offset_bottom = 211.0
+offset_bottom = 243.0
 
 [node name="PersonagemLabel" type="Label" parent="CanvasLayer/PersonagemPanel"]
 layout_mode = 0
@@ -561,7 +561,7 @@ offset_left = 8.0
 offset_top = 3.0
 offset_right = 294.0
 offset_bottom = 91.0
-theme_override_fonts/font = ExtResource("9_pakjr")
+theme_override_fonts/font = ExtResource("9_13tbm")
 theme_override_font_sizes/font_size = 18
 autowrap_mode = 2
 
@@ -577,7 +577,7 @@ offset_left = 9.0
 offset_top = 8.0
 offset_right = 319.0
 offset_bottom = 96.0
-theme_override_fonts/font = ExtResource("9_pakjr")
+theme_override_fonts/font = ExtResource("9_13tbm")
 theme_override_font_sizes/font_size = 18
 autowrap_mode = 2
 
@@ -596,5 +596,5 @@ offset_left = 460.0
 offset_top = 563.0
 offset_right = 760.0
 offset_bottom = 599.0
-theme_override_fonts/font = ExtResource("10_j4ush")
-text = "Continuar a jornada..."
+theme_override_fonts/font = ExtResource("10_qyh1m")
+text = "ENCONTRAR OBJETOS"

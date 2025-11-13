@@ -1,0 +1,153 @@
+[gd_scene load_steps=16 format=3 uid="uid://bkkagfx8l1bnr"]
+
+[ext_resource type="Texture2D" uid="uid://c1ehprsleymdg" path="res://assets/background/bgHomePage.jpg" id="1_dna5m"]
+[ext_resource type="Texture2D" uid="uid://m23maaqdtd3b" path="res://assets/sprites/personagem/personagem.png" id="2_74d5b"]
+[ext_resource type="Texture2D" uid="uid://b7ylhvu2ea07i" path="res://assets/sprites/personagem/medo.png" id="3_fibfr"]
+[ext_resource type="Texture2D" uid="uid://cwuc8mfwnkht5" path="res://assets/sprites/personagem/falando.png" id="4_7onfk"]
+[ext_resource type="Texture2D" uid="uid://cbud57fvxc1sp" path="res://assets/sprites/personagem/triste.png" id="5_dk27h"]
+[ext_resource type="Texture2D" uid="uid://xfrjmchs485s" path="res://assets/sprites/personagem/feliz.png" id="6_scndi"]
+[ext_resource type="Script" uid="uid://bljfhqlebqk5" path="res://scripts/ScriptAnimation.gd" id="7_hchfn"]
+[ext_resource type="Texture2D" uid="uid://dw50tduhgu6f" path="res://assets/sprites/coelho/relogio_centro.png" id="8_j1cn7"]
+[ext_resource type="Texture2D" uid="uid://bhfcw7khegetp" path="res://assets/sprites/coelho/relogio_direita.png" id="9_if2jw"]
+[ext_resource type="Texture2D" uid="uid://cd7pw26dxniqf" path="res://assets/sprites/coelho/relogio_esquerda.png" id="10_fvjgd"]
+[ext_resource type="FontFile" uid="uid://c7hnnct5hsqpn" path="res://assets/fonts/title.otf" id="11_ooon5"]
+[ext_resource type="Script" uid="uid://6bvpoceaftmh" path="res://scripts/ControlFinalPage.gd" id="12_dna5m"]
+[ext_resource type="FontFile" uid="uid://cicxj0p1x5qbg" path="res://assets/fonts/normal.ttf" id="13_72rrr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4v10x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_74d5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fibfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_74d5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7onfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_74d5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dk27h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_74d5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_scndi")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nxs05"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_j1cn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_if2jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j1cn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fvjgd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="TelaFinal" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1163.0
+offset_bottom = 661.0
+mouse_filter = 2
+texture = ExtResource("1_dna5m")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_top = -5.0
+offset_right = 1166.0
+offset_bottom = 656.0
+color = Color(0, 0, 0, 0.7058824)
+metadata/_edit_lock_ = true
+
+[node name="Control" type="Node" parent="."]
+
+[node name="PersonagemAnimated" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(211, 423)
+scale = Vector2(0.7941176, 0.7352941)
+sprite_frames = SubResource("SpriteFrames_4v10x")
+animation = &"idle"
+frame_progress = 0.30941674
+script = ExtResource("7_hchfn")
+
+[node name="CoelhoAnimated" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(989, 474)
+scale = Vector2(0.5882352, 0.5310458)
+sprite_frames = SubResource("SpriteFrames_nxs05")
+animation = &"idle"
+frame = 3
+frame_progress = 1.0
+script = ExtResource("7_hchfn")
+
+[node name="TitleLabel" type="Label" parent="Control"]
+offset_left = 98.0
+offset_top = 56.0
+offset_right = 1091.0
+offset_bottom = 177.0
+theme_override_fonts/font = ExtResource("11_ooon5")
+theme_override_font_sizes/font_size = 40
+text = "Você está vivendo ou apenas passando pelo tempo?"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="RestartButton" type="Button" parent="Control"]
+offset_left = 479.0
+offset_top = 478.0
+offset_right = 735.0
+offset_bottom = 518.0
+theme_override_fonts/font = ExtResource("11_ooon5")
+text = "REINICIAR JOGO"
+script = ExtResource("12_dna5m")
+
+[node name="FraseLabel" type="Label" parent="Control"]
+offset_left = 263.0
+offset_top = 199.0
+offset_right = 927.0
+offset_bottom = 227.0
+theme_override_fonts/font = ExtResource("13_72rrr")
+text = "Jogo desenvolvido para o trabalho final de TAPOO"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="Control"]
+offset_left = 346.0
+offset_top = 226.0
+offset_right = 853.0
+offset_bottom = 451.0
+
+[node name="FraseLabel2" type="Label" parent="Control/Panel"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 17.0
+offset_right = 510.0
+offset_bottom = 212.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_72rrr")
+text = "Grupo: Divas De Info
+Júlia Martins: Programadora e Desenvolvedora
+Isadora Ramos: Designer de Gameplay
+Heitor Freitas: Designer Visual
+Maria Fernanda: Roteirista
+Maria Eduarda: Gerente de Projeto"
+horizontal_alignment = 1

@@ -6,7 +6,7 @@ extends Node
 
 # O Caminho do arquivo da próxima cena que deve ser carregada.
 # ESTE CAMPO DEVE SER PREENCHIDO NO INSPECTOR PARA ESTA CENA 
-@export var next_scene_path: String = "res://scenes/escola_scene.tscn"
+@export var next_scene_path: String = "res://scenes/dialogue_scene3.tscn"
 
 # REFERÊNCIA AO BOTÃO DE TRANSIÇÃO 
 @export var transition_button_path: NodePath

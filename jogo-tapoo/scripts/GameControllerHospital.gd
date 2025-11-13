@@ -6,7 +6,7 @@ extends Node
 
 # O Caminho do arquivo da próxima cena que deve ser carregada.
 # ESTE CAMPO DEVE SER PREENCHIDO NO INSPECTOR PARA ESTA CENA 
-@export var next_scene_path: String = "res://scenes/final_scene.tscn"
+@export var next_scene_path: String = "res://scenes/tela_final.tscn"
 
 # REFERÊNCIA AO BOTÃO DE TRANSIÇÃO 
 @export var transition_button_path: NodePath
@@ -134,7 +134,7 @@ func end_level():
 	
 	# 3. Exibe o Botão de Transição
 	if transition_button:
-		transition_button.text = "Reiniciar"
+		transition_button.text = "Concluir"
 		transition_button.show()
 	else:
 		push_error("ERRO: Botão de transição não configurado. Impossível continuar.")
