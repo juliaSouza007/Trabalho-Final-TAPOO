@@ -1,0 +1,150 @@
+[gd_scene load_steps=16 format=3 uid="uid://6mvuynh4h1m4"]
+
+[ext_resource type="Texture2D" uid="uid://b7atw0j4jwp11" path="res://assets/background/bgQuarto.png" id="1_ti07y"]
+[ext_resource type="Script" uid="uid://bmymvmgtuhsi2" path="res://scripts/GameControllerQuarto.gd" id="2_ti07y"]
+[ext_resource type="Script" uid="uid://y1jayi2itvff" path="res://scripts/Object.gd" id="3_mrn8d"]
+[ext_resource type="Texture2D" uid="uid://do5ni0jwthpl8" path="res://assets/objects/quarto/diario.png" id="4_ctodc"]
+[ext_resource type="Texture2D" uid="uid://cbomey70hf32i" path="res://assets/objects/quarto/fone.png" id="5_mrn8d"]
+[ext_resource type="Texture2D" uid="uid://bbjincmgmtfyu" path="res://assets/objects/quarto/cacto.png" id="6_hs1ws"]
+[ext_resource type="Texture2D" uid="uid://dq2wk3t3g773b" path="res://assets/objects/quarto/violão.png" id="7_p3qwk"]
+[ext_resource type="Texture2D" uid="uid://doespjhauuowh" path="res://assets/objects/quarto/garrafa.png" id="8_d33b1"]
+[ext_resource type="FontFile" uid="uid://cicxj0p1x5qbg" path="res://assets/fonts/normal.ttf" id="9_ti07y"]
+[ext_resource type="FontFile" uid="uid://c7hnnct5hsqpn" path="res://assets/fonts/title.otf" id="10_ctodc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgjuh"]
+size = Vector2(37.600967, 36.69993)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fkh6o"]
+radius = 19.187883
+height = 48.01415
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uaycg"]
+height = 36.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sra3f"]
+radius = 32.52714
+height = 81.54451
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4b3o3"]
+size = Vector2(16, 32.527603)
+
+[node name="QuartoScene" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1156.0
+offset_bottom = 653.0
+mouse_filter = 2
+texture = ExtResource("1_ti07y")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="GameController" type="Node" parent="."]
+script = ExtResource("2_ti07y")
+transition_button_path = NodePath("../NextButton")
+enigma_label_path = NodePath("../EnigmaText")
+
+[node name="ObjectContainer" type="Node2D" parent="."]
+
+[node name="diario" type="Area2D" parent="ObjectContainer"]
+position = Vector2(638, 405)
+script = ExtResource("3_mrn8d")
+object_id = 1
+game_controller_path = NodePath("../../GameController")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjectContainer/diario"]
+rotation = -0.18325958
+scale = Vector2(0.24140191, 0.23134983)
+texture = ExtResource("4_ctodc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectContainer/diario"]
+position = Vector2(1, 3)
+rotation = -0.61086524
+scale = Vector2(0.9999999, 0.9999998)
+skew = -0.6702064
+shape = SubResource("RectangleShape2D_cgjuh")
+
+[node name="fone" type="Area2D" parent="ObjectContainer"]
+position = Vector2(231, 561)
+script = ExtResource("3_mrn8d")
+object_id = 2
+game_controller_path = NodePath("../../GameController")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjectContainer/fone"]
+rotation = -2.0123646
+scale = Vector2(0.18426928, 0.17136185)
+texture = ExtResource("5_mrn8d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectContainer/fone"]
+position = Vector2(4, -3)
+rotation = -1.7976891
+shape = SubResource("CapsuleShape2D_fkh6o")
+
+[node name="cacto" type="Area2D" parent="ObjectContainer"]
+position = Vector2(839, 332)
+script = ExtResource("3_mrn8d")
+object_id = 3
+game_controller_path = NodePath("../../GameController")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjectContainer/cacto"]
+scale = Vector2(0.19612691, 0.13973951)
+texture = ExtResource("6_hs1ws")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectContainer/cacto"]
+position = Vector2(1, 3)
+shape = SubResource("CapsuleShape2D_uaycg")
+
+[node name="violao" type="Area2D" parent="ObjectContainer"]
+position = Vector2(468, 389)
+script = ExtResource("3_mrn8d")
+object_id = 4
+game_controller_path = NodePath("../../GameController")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjectContainer/violao"]
+rotation = -1.6458455
+scale = Vector2(0.36870962, 0.3329066)
+skew = -0.10297442
+texture = ExtResource("7_p3qwk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectContainer/violao"]
+position = Vector2(26.999998, -4.9999995)
+rotation = 1.3421582
+shape = SubResource("CapsuleShape2D_sra3f")
+
+[node name="garrafa" type="Area2D" parent="ObjectContainer"]
+position = Vector2(186, 399)
+script = ExtResource("3_mrn8d")
+object_id = 5
+game_controller_path = NodePath("../../GameController")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjectContainer/garrafa"]
+scale = Vector2(0.1471111, 0.11212229)
+texture = ExtResource("8_d33b1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectContainer/garrafa"]
+position = Vector2(0, 1.2638015)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_4b3o3")
+
+[node name="EnigmaText" type="Label" parent="."]
+offset_left = 50.0
+offset_top = 21.0
+offset_right = 90.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("9_ti07y")
+theme_override_font_sizes/font_size = 12
+
+[node name="NextButton" type="Button" parent="."]
+offset_left = 958.0
+offset_top = 604.0
+offset_right = 1140.0
+offset_bottom = 638.0
+theme_override_fonts/font = ExtResource("10_ctodc")
+theme_override_font_sizes/font_size = 12
