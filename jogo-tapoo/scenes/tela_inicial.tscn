@@ -1,0 +1,129 @@
+[gd_scene load_steps=16 format=3 uid="uid://c465ubc04rpsc"]
+
+[ext_resource type="Texture2D" uid="uid://c1ehprsleymdg" path="res://assets/background/bgHomePage.jpg" id="1_hkbxb"]
+[ext_resource type="Script" uid="uid://bosftmgp0jqn5" path="res://scripts/ControlHomePage.gd" id="2_oab43"]
+[ext_resource type="FontFile" uid="uid://c7hnnct5hsqpn" path="res://assets/fonts/title.otf" id="2_xo13d"]
+[ext_resource type="Texture2D" uid="uid://dw50tduhgu6f" path="res://assets/sprites/coelho/relogio_centro.png" id="3_oiiwr"]
+[ext_resource type="Texture2D" uid="uid://bhfcw7khegetp" path="res://assets/sprites/coelho/relogio_direita.png" id="4_moypc"]
+[ext_resource type="Texture2D" uid="uid://cd7pw26dxniqf" path="res://assets/sprites/coelho/relogio_esquerda.png" id="5_oab43"]
+[ext_resource type="Texture2D" uid="uid://m23maaqdtd3b" path="res://assets/sprites/personagem/personagem.png" id="6_gtx6n"]
+[ext_resource type="Script" uid="uid://bljfhqlebqk5" path="res://scripts/ScriptAnimation.gd" id="7_gtx6n"]
+[ext_resource type="Texture2D" uid="uid://b7ylhvu2ea07i" path="res://assets/sprites/personagem/medo.png" id="7_iqjk3"]
+[ext_resource type="Texture2D" uid="uid://cwuc8mfwnkht5" path="res://assets/sprites/personagem/falando.png" id="8_7b4lx"]
+[ext_resource type="Texture2D" uid="uid://cbud57fvxc1sp" path="res://assets/sprites/personagem/triste.png" id="9_t0imx"]
+[ext_resource type="Texture2D" uid="uid://xfrjmchs485s" path="res://assets/sprites/personagem/feliz.png" id="10_5l0lk"]
+[ext_resource type="FontFile" uid="uid://cicxj0p1x5qbg" path="res://assets/fonts/normal.ttf" id="12_gtx6n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4v10x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gtx6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iqjk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gtx6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7b4lx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gtx6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_t0imx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gtx6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5l0lk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nxs05"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_oiiwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_moypc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oiiwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oab43")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="TelaInicial" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1163.0
+offset_bottom = 661.0
+mouse_filter = 2
+texture = ExtResource("1_hkbxb")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_top = -5.0
+offset_right = 1166.0
+offset_bottom = 656.0
+color = Color(0, 0, 0, 0.3764706)
+
+[node name="Control" type="Node" parent="."]
+
+[node name="PersonagemAnimated" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(211, 423)
+scale = Vector2(0.7941176, 0.7352941)
+sprite_frames = SubResource("SpriteFrames_4v10x")
+animation = &"idle"
+frame_progress = 0.30941674
+script = ExtResource("7_gtx6n")
+
+[node name="CoelhoAnimated" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(989, 474)
+scale = Vector2(0.5882352, 0.5310458)
+sprite_frames = SubResource("SpriteFrames_nxs05")
+animation = &"idle"
+frame = 3
+frame_progress = 1.0
+script = ExtResource("7_gtx6n")
+
+[node name="TitleLabel" type="Label" parent="Control"]
+offset_left = 257.0
+offset_top = 28.0
+offset_right = 929.0
+offset_bottom = 151.0
+theme_override_fonts/font = ExtResource("2_xo13d")
+theme_override_font_sizes/font_size = 50
+text = "TIC TAC: 
+o tempo perdido"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="Control"]
+offset_left = 465.0
+offset_top = 271.0
+offset_right = 721.0
+offset_bottom = 311.0
+theme_override_fonts/font = ExtResource("2_xo13d")
+text = "INICIAR JOGO"
+script = ExtResource("2_oab43")
+
+[node name="FraseLabel" type="Label" parent="Control"]
+offset_left = 263.0
+offset_top = 160.0
+offset_right = 927.0
+offset_bottom = 188.0
+theme_override_fonts/font = ExtResource("12_gtx6n")
+text = "Você está preparado para enfrentar o maior mal do mundo moderno?"

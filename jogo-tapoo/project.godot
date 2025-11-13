@@ -11,6 +11,6 @@ config_version=5
 [application]
 
 config/name="jogoTapoo"
-run/main_scene="uid://6mvuynh4h1m4"
+run/main_scene="uid://c465ubc04rpsc"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"

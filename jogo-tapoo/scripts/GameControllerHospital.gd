@@ -134,7 +134,7 @@ func end_level():
 	
 	# 3. Exibe o Botão de Transição
 	if transition_button:
-		transition_button.text = "Próxima fase"
+		transition_button.text = "Reiniciar"
 		transition_button.show()
 	else:
 		push_error("ERRO: Botão de transição não configurado. Impossível continuar.")
