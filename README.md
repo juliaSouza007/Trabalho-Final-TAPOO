@@ -1,98 +1,126 @@
-# Trabalho Final de TAPOO - Tic Tac: O Tempo Perdido
-Desenvolvimento de um jogo digital utilizando a biblioteca MonoGame
+<div align="center">
 
-**Gênero:** Hidden Object + Puzzle Narrativo  
-**Tema Central:** Crítica à vida moderna acelerada e à perda da atenção ao essencial.  
-**Mensagem Final:** A memória não foi perdida por um acidente, mas pelo excesso de distrações que roubaram o presente.
+# 🎮 **Tic Tac: O Tempo Perdido**  
+### *Trabalho Final de TAPOO – Jogo Digital desenvolvido na Godot Engine 4.x*
 
----
+![Capa do Projeto](assets/github/capa.png)
 
-## 1. História, Tema e Gênero
-
-### História
-O jogador controla uma personagem anônima que acorda em um vazio mental, recebendo o recado do coelho de Alice (do *País das Maravilhas*), e inicia sua jornada para recuperar o tempo perdido. Suas memórias estão fragmentadas em quatro cenários distintos, cada um representando uma etapa da vida marcada por pressa, distração e esquecimento.
-
-À medida que o jogador resolve os enigmas e encontra objetos escondidos nesses cenários, pequenos fragmentos de lembrança são recuperados. No entanto, o que emerge não é a imagem de uma vida plena, mas a constatação de que a personagem viveu ocupada demais para realmente viver. 
-
-### Tema
-- **Crítica social:** Ritmo acelerado da vida moderna.
-- **Questão filosófica:** Como a pressa e o excesso de tarefas nos afastam do essencial.
-- **Tom narrativo:** Misterioso, melancólico, reflexivo.
-
-### Gênero
-- **Hidden Object (Objetos escondidos):** Exploração visual, busca por itens que remetem à memória.
-- **Puzzle:** O jogador descobre os enigmas relacionados a cada objeto, como também a verdade sobre a vida da personagem.
+</div>
 
 ---
 
-## 2. Mecânicas Principais
+# **Descrição Geral**
 
-### Objetos Escondidos
-- Cada cenário contém de 5 itens-chave escondidos em locais estratégicos.
-- Interação simples: clique para coletar o item.
+**Tic Tac: O Tempo Perdido** é um jogo narrativo dos gêneros **Hidden Object** e **Puzzle**, que explora a pressa, a distração e o vazio emocional causados pela vida moderna.
 
-### Sistema de Puzzle
-- Cada objeto tem seu enigma para ser resolvido.
-- Cada cena tem 5 puzzles, representando a memória completa daquela parte.
+O jogador acorda em um espaço mental vazio e, guiado pelo **Coelho de Alice**, deve recuperar fragmentos de memória espalhados por quatro cenários que representam fases da vida marcadas pela correria.
 
-### Cutscenes
-- Cutscenes curtas após cada fase.
-- Pequenos textos (4 a 6 frases) entre os cenário, com uma linguagem enigmática que dá pistas, sem explicações claras.
-- O mistério mantém o jogador intrigado.
-
-### Final Reflexivo
-- Ao completar o puzzle, uma última cutscene revela a crítica social.
-- O jogo termina com uma pergunta aberta: **"Você está vivendo ou apenas passando pelo tempo?"**
+Ao final, a revelação:  
+> **A memória não foi perdida por um acidente, mas pelo excesso de distrações que roubaram o presente.**
 
 ---
 
-## 3. Conceitos Visuais e Personagens
+# **Tema e Gênero**
 
-### Personagens
-- **Coelho de Alice**, representando o tempo.
-- **Mulher doente**
-
-### Cenários (Metáforas Visuais)
-
-#### Quarto
-- **Significado:** A intimidade pessoal perdida para a correria.
-
-#### Escola
-- **Significado:** A vida de obrigações, metas e cobranças.
-
-#### Escritório
-- **Significado:** a vida adulta, o trabalho incessante.
-
-#### Hospital
-- **Significado:** O corpo que cobra o preço da pressa.
+- **Crítica Social:** ritmo acelerado da vida moderna.  
+- **Questão Filosófica:** estamos vivendo ou apenas passando pelo tempo?  
+- **Tom:** misterioso, melancólico, reflexivo.
 
 ---
 
-## 4. Relevância do Tema
+# **Mecânicas Principais**
 
-### Importância
-O jogo traz uma crítica contemporânea sobre o excesso de pressa, produtividade e distrações digitais. Ele dialoga diretamente com o público jovem e adulto, que vive essa realidade, e propõe uma reflexão: **"Será que estamos vivendo de fato ou apenas sobrevivendo ao relógio?"**
+### **Objetos Escondidos**
+- Cada cenário contém **5 itens-chave** escondidos.
+- Interação simples via **clique**.
+- Cada item revela um fragmento de memória.
 
-### Objetivo Narrativo
-- Impactar emocionalmente o jogador sem a necessidade de longos diálogos.
-- Usar a mecânica do próprio jogo como metáfora: procurar objetos esquecidos simboliza procurar sentido na vida.
+### **Puzzles**
+- Cada objeto possui um pequeno enigma.
+- 5 enigmas por fase → memória completa da etapa.
+
+### **Cutscenes**
+- Sequências textuais curtas.
+- Linguagem enigmática e simbólica.
+
+### **Final Reflexivo**
+- Uma última cutscene revela a crítica social.
+- O jogo termina com a pergunta:
+  **"Você está vivendo ou apenas passando pelo tempo?"**
 
 ---
 
-## Como Jogar
-- **Controles:** Clique para interagir com os objetos.
-- **Objetivo:** Encontrar os itens escondidos em cada cenário, de acordo com o enigma, para recuperar fragmentos de memória.
+# **Cenários e Significados**
+
+| Cenário      | Significado |
+|--------------|-------------|
+|  Quarto      | A intimidade perdida pela correria. |
+|  Escola      | Obrigações, metas e cobranças. |
+|  Escritório  | Trabalho incessante e rotina mecânica. |
+|  Hospital    | O corpo cobrando o preço da pressa. |
+
+### **Personagens**
+- **Coelho de Alice** → Representa o tempo.  
+- **Protagonista (Mulher)** → Fragmentada e adoecida emocionalmente.
 
 ---
 
-## Desenvolvedores
+# **Como Executar o Projeto (Godot 4.x)**
 
-**Grupo:** Divas De Info
+### ✔️ **1. Baixar o projeto**
+1. Acesse o repositório no GitHub.  
+2. Clique em **Code > Download ZIP**.  
+3. Extraia o arquivo ZIP em uma pasta de sua preferência.
 
-- **Júlia Martins:** Programadora Principal
-- **Isadora Ramos:** Designer de Gameplay
-- **Heitor Freitas:** Designer Visual
-- **Maria Fernanda:** Roteirista
-- **Maria Eduarda:** Gerente de Projeto
+### ✔️ **2. Instalar a Godot Engine 4.x**
+Baixe em:  
+https://godotengine.org/download
 
+### ✔️ **3. Abrir o projeto**
+1. Abra o Godot 4.x.  
+2. Na tela inicial, clique em **Import**.  
+3. Navegue até a pasta EXTRAÍDA e selecione o arquivo:  
+   **`project.godot`**  
+4. Clique em **Import & Edit**.
+
+### ✔️ **4. Executar o jogo**
+- Para rodar, pressione **F5** (WINDOWS) ou **Command+B** (MAC).  
+- Ou clique no botão **Play** no canto superior direito.
+
+---
+
+# **Como Jogar**
+
+- Clique para interagir com objetos.  
+- Encontre os 5 itens escondidos em cada cenário.  
+- Resolva os puzzles associados.  
+- Recupere todas as memórias e descubra a verdade.
+
+---
+
+#  **Estrutura do Projeto**
+
+- **/assets** — Imagens, artes, ícones  
+- **/scenes** — Cenas do Godot (fases + UI)  
+- **/scripts** — Scripts GDScript do jogo  
+- **/dialogues** — Cutscenes e textos narrativos  
+- **project.godot** — Arquivo principal do Godot  
+
+---
+
+# **Grupo – Divas de Info**
+
+- **Júlia Martins** – Programadora Principal  
+- **Isadora Ramos** – Designer de Gameplay  
+- **Heitor Freitas** – Designer Visual  
+- **Maria Fernanda** – Roteirista  
+- **Maria Eduarda** – Gerente de Projeto  
+
+---
+
+<div align="center">
+
+### COLTEC 2025
+
+</div>
 
