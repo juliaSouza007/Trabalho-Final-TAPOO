@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://0pxoml4lxauk"]
+[gd_scene load_steps=17 format=3 uid="uid://0pxoml4lxauk"]
 
 [ext_resource type="Texture2D" uid="uid://cv8xag4ftm5hm" path="res://assets/background/bgEscritorio.png" id="1_po42j"]
 [ext_resource type="Script" uid="uid://bm2ucumr25kab" path="res://scripts/GameControllerEscritorio.gd" id="2_po42j"]
@@ -30,6 +30,9 @@ height = 55.767815
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4b3o3"]
 size = Vector2(29, 15)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_po42j"]
+bg_color = Color(0, 0, 0, 0.8039216)
+
 [node name="EscritorioScene" type="Node2D"]
 
 [node name="Background" type="TextureRect" parent="."]
@@ -43,7 +46,7 @@ metadata/_edit_lock_ = true
 [node name="GameController" type="Node" parent="."]
 script = ExtResource("2_po42j")
 transition_button_path = NodePath("../NextButton")
-enigma_label_path = NodePath("../EnigmaText")
+enigma_label_path = NodePath("../Panel/EnigmaText")
 
 [node name="ObjectContainer" type="Node2D" parent="."]
 
@@ -130,21 +133,30 @@ position = Vector2(-1.5, -0.5)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_4b3o3")
 
-[node name="EnigmaText" type="Label" parent="."]
-offset_left = 54.0
-offset_top = 13.0
-offset_right = 95.0
-offset_bottom = 34.0
+[node name="NextButton" type="Button" parent="."]
+offset_left = 644.0
+offset_top = 597.0
+offset_right = 826.0
+offset_bottom = 631.0
+theme_override_fonts/font = ExtResource("10_6smfb")
+theme_override_font_sizes/font_size = 12
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 23.0
+offset_top = 21.0
+offset_right = 1134.0
+offset_bottom = 90.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_po42j")
+
+[node name="EnigmaText" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 9.0
+offset_right = 1095.0
+offset_bottom = 31.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("9_miikn")
-theme_override_font_sizes/font_size = 12
-
-[node name="NextButton" type="Button" parent="."]
-offset_left = 958.0
-offset_top = 604.0
-offset_right = 1140.0
-offset_bottom = 638.0
-theme_override_fonts/font = ExtResource("10_6smfb")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 16
+autowrap_mode = 2

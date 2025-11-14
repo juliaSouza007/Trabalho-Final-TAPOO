@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ctypbyn5cx2tr"]
+[gd_scene load_steps=17 format=3 uid="uid://ctypbyn5cx2tr"]
 
 [ext_resource type="Texture2D" uid="uid://xkdustpm6li3" path="res://assets/background/bgHospital.png" id="1_h0ptg"]
 [ext_resource type="Script" uid="uid://enpbfmlvud8y" path="res://scripts/GameControllerHospital.gd" id="2_h0ptg"]
@@ -28,6 +28,9 @@ height = 43.994576
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4b3o3"]
 size = Vector2(29, 19.851582)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0ptg"]
+bg_color = Color(0, 0, 0, 0.8039216)
+
 [node name="HospitalScene" type="Node2D"]
 
 [node name="Background" type="TextureRect" parent="."]
@@ -41,7 +44,7 @@ metadata/_edit_lock_ = true
 [node name="GameController" type="Node" parent="."]
 script = ExtResource("2_h0ptg")
 transition_button_path = NodePath("../NextButton")
-enigma_label_path = NodePath("../EnigmaText")
+enigma_label_path = NodePath("../Panel/EnigmaText")
 
 [node name="ObjectContainer" type="Node2D" parent="."]
 
@@ -128,21 +131,30 @@ rotation = 0.061086524
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_4b3o3")
 
-[node name="EnigmaText" type="Label" parent="."]
-offset_left = 54.0
-offset_top = 13.0
-offset_right = 95.0
-offset_bottom = 34.0
+[node name="NextButton" type="Button" parent="."]
+offset_left = 516.0
+offset_top = 584.0
+offset_right = 698.0
+offset_bottom = 618.0
+theme_override_fonts/font = ExtResource("10_2gj7l")
+theme_override_font_sizes/font_size = 12
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 23.0
+offset_top = 21.0
+offset_right = 1134.0
+offset_bottom = 90.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h0ptg")
+
+[node name="EnigmaText" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 9.0
+offset_right = 1098.0
+offset_bottom = 30.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("9_cis8i")
-theme_override_font_sizes/font_size = 12
-
-[node name="NextButton" type="Button" parent="."]
-offset_left = 958.0
-offset_top = 604.0
-offset_right = 1140.0
-offset_bottom = 638.0
-theme_override_fonts/font = ExtResource("10_2gj7l")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 16
+autowrap_mode = 2

@@ -588,7 +588,7 @@ offset_right = 762.0
 offset_bottom = 56.0
 theme_override_fonts/font = SubResource("FontFile_q4mab")
 theme_override_font_sizes/font_size = 18
-text = "Clique para continuar"
+text = "Clique aqui para continuar"
 autowrap_mode = 2
 
 [node name="NextSceneButton" type="Button" parent="CanvasLayer"]

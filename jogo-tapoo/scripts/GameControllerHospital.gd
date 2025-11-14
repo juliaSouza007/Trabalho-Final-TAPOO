@@ -109,8 +109,6 @@ func start_next_enigma():
 		# Chama set_collectable(true) para o objeto atual, e (false) para os outros
 		objects[id].set_collectable(is_target)
 
-	print("Enigma Atual: ", current_enigma_index, " - Procurando por: ", OBJECT_NAMES.get(current_enigma_index))
-
 # -------------------- Processamento do Clique --------------------
 func object_collected(object_id: int):
 	# Confirma que o objeto clicado é o que está sendo procurado no momento
