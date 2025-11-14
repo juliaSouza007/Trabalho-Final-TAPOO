@@ -3,7 +3,7 @@
 # 🎮 **Tic Tac: O Tempo Perdido**  
 ### *Trabalho Final de TAPOO – Jogo Digital desenvolvido na Godot Engine 4.x*
 
-![Capa do Projeto](assets/github/capa.png)
+![Capa do Projeto](jogo-tapoo/assets/github/capa.png)
 
 </div>
 
